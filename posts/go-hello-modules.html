@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Go 笔记：从 Hello World 到 Modules · 晚霞的笔记</title>
+  <meta name="description" content="占位文章：Go 入门与 modules 速记" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-logo" href="../index.html">晚霞<span>的笔记</span></a>
+      <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a>
+        <a href="index.html">文章</a>
+        <a href="../about.html">关于</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main prose">
+    <a class="back-link" href="index.html">← 返回文章列表</a>
+    <h1>Go 笔记：从 Hello World 到 Modules</h1>
+    <p class="post-meta">
+      <time datetime="2026-09-28">2026-09-28</time>
+      · <a class="tag" href="index.html#go">Go 笔记</a>
+      · 占位示例
+    </p>
+
+    <blockquote>
+      本文为脚手架占位内容，正式笔记稍后替换。结构示意：概念 → 命令 → 小结。
+    </blockquote>
+
+    <h2>1. 最小程序</h2>
+    <p>创建一个 <code>hello.go</code>：</p>
+    <pre><code>package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("你好，晚霞")
+}</code></pre>
+    <p>运行：</p>
+    <pre><code>go run hello.go</code></pre>
+
+    <h2>2. 用 Modules 管理依赖</h2>
+    <p>在项目根目录初始化模块（模块路径可按自己的仓库改）：</p>
+    <pre><code>go mod init example.com/hello
+go get example.com/some/pkg@latest
+go mod tidy</code></pre>
+
+    <h2>3. 小结（占位）</h2>
+    <ul>
+      <li><code>go run</code> 适合快速试跑</li>
+      <li><code>go mod</code> 是依赖与版本的入口</li>
+      <li>后续可补充：goroutine、channel、常见踩坑</li>
+    </ul>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© TwilightSinging · 晚霞的笔记</span>
+      <span><a href="https://github.com/TwilightSinging">GitHub</a></span>
+    </div>
+  </footer>
+</body>
+</html>
